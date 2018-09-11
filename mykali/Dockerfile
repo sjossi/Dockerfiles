@@ -1,5 +1,5 @@
 # Based off the official Kali Docker image
-FROM kalilinux/kali-linux-latest:latest
+FROM kalilinux/kali-linux-docker:latest
 
 # Update the db and upgrade the packages
 RUN apt update && apt upgrade -y
