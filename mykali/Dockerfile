@@ -2,16 +2,14 @@
 FROM kalilinux/kali-linux-docker:latest
 
 # Update the db and upgrade the packages
-RUN apt update && apt upgrade -y
-
-# Install the kali top10 to start with
-RUN apt install -y kali-linux-top10 \
-                   man-db \
-                   exploitdb
+RUN apt-get update && apt-get upgrade -y
 
 # Here come all the tools that I need that are not in the top10
 
-RUN apt install -y  radare2 \
-                    python-pip \
+RUN apt-get install -y  radare2 \
+                        python-pip \
+                        man-db \
+                        exploitdb 
+
 
 # Set up metasploit db if not yet created
