@@ -2,7 +2,7 @@
 FROM kalilinux/kali-linux-docker:latest
 
 # Update the db and upgrade the packages
-RUN apt-get update && apt-get upgrade -y 
+RUN apt-get update && apt-get dist-upgrade -y 
 
 # Here come all the tools that I need that are not in the top10
 
